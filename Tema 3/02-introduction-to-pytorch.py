@@ -13,7 +13,7 @@ from pandas import read_csv
 import numpy as np
 from sklearn.model_selection import train_test_split
 
-data_df = read_csv('https://raw.githubusercontent.com/jamaltoutouh/CursoGAN-URep-2021/main/pima-indians-diabetes.csv', header=None)
+data_df = read_csv('https://raw.githubusercontent.com/jamaltoutouh/CursoGAN-URep-2021/main/Tema%203/pima-indians-diabetes.csv', header=None)
 
 data = data_df.to_numpy()
 np.shape(data)
