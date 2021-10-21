@@ -1,6 +1,6 @@
 # CursoGAN-URep-2021
 
-## Tema 3:
+### Tema 3:
 
 Contenidos:
 
