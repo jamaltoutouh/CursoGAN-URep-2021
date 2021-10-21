@@ -114,10 +114,14 @@ def show_loss(loss):
     ax.grid()
     plt.show()
 
+# ----------------------------------------------------------
+# Configuring the main parameters of the training process
 
 # Selecting a Loss function
 myNN_loss = nn.BCELoss()  # For a binary classification problem
-myNN_optimizer = torch.optim.Adam(myNN.parameters(), lr=0.01)  # Adam optimizer
+learning_rate = 0.01
+myNN_optimizer = torch.optim.Adam(myNN.parameters(), lr=learning_rate)  # Adam optimizer
+# myNN_optimizer = torch.optim.SGD(myNN.parameters(), lr=learning_rate)  # SGD optimizer
 
 # Selecting the number of training epochs and the batch size
 EPOCHS = 100
