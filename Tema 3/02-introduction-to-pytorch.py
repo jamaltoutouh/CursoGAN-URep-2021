@@ -97,7 +97,7 @@ myNN = MyNeuralNetwork()
 
 # Function to compute the accuracy of our ANN
 def binary_acc(y_pred, y_test):
-    y_pred_tag = torch.round(torch.sigmoid(y_pred))
+    y_pred_tag = torch.round(y_pred)
     correct_results_sum = (y_pred_tag == y_test).sum().float()
     acc = correct_results_sum / y_test.shape[0]
     acc = torch.round(acc * 100)
@@ -169,9 +169,6 @@ for X_batch, y_batch in test_loader:
 
     loss = myNN_loss(y_pred, y_batch.unsqueeze(1))
     acc = binary_acc(y_pred, y_batch.unsqueeze(1))
-
-    loss.backward()
-    myNN_optimizer.step()
 
     test_loss += loss.item()
     test_acc += acc.item()
