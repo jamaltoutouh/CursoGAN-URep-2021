@@ -92,9 +92,6 @@ class MyNeuralNetwork(nn.Module):
         x = self.net(x)
         return x
 
-myNN = MyNeuralNetwork()
-
-
 # Function to compute the accuracy of our ANN
 def binary_acc(y_pred, y_test):
     y_pred_tag = torch.round(y_pred)
@@ -116,6 +113,9 @@ def show_loss(loss):
 
 # ----------------------------------------------------------
 # Configuring the main parameters of the training process
+
+# Create a NN instance
+myNN = MyNeuralNetwork()
 
 # Selecting a Loss function
 myNN_loss = nn.BCELoss()  # For a binary classification problem
